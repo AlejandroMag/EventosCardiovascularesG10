@@ -78,6 +78,7 @@ $(document).ready(function () {
         <li><a href="#introducción">Introducción</a></li>
         <li><a href="#visualización-de-los-datos">Visualización De Los Datos</a></li>
         <li><a href="#predictor">Predictor</a></li>
+        <li><a href="#autores">Autores</a></li>
         </ul>
         </div>
         
@@ -105,8 +106,22 @@ $(document).ready(function () {
 <h3>Eventos Cardíacos Totales</h3>
 <p>Este gráfico muestra la cantidad de personas que padecieron eventos cardiovasculares y el porcentaje de personas que no han padecido eventos.</p>
 <p><img src="index_files/figure-html/porcentajeEventos-1.png" width="576" /></p>
-<pre><code>     PacientesConEventos PacientesSinEventos
-[1,]                 121                 881</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Pacientes Sin Evento</th>
+<th>Pacientes Con Evento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cantidad</td>
+<td>881</td>
+<td>121</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="eventos-analizados-por-edad" class="section level3 unnumbered un">
 <h3>Eventos Analizados Por Edad</h3>
@@ -119,8 +134,24 @@ $(document).ready(function () {
 <h3>Análisis De Edad Por 3 Grupos</h3>
 <p>Aquí pueden verse la cantidad de casos diferenciados por los rangos de edad.</p>
 <p><img src="index_files/figure-html/graficoEdadesGRUPOS-1.png" width="576" /></p>
-<pre><code>     TotalDe1740 TotalDe4060 TotalDe60plus
-[1,]           3          46            72</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Pacientes Mayores a 60</th>
+<th>Pacientes Entre 40 y 60</th>
+<th>Pacientes Menores a 40</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cantidad</td>
+<td>76</td>
+<td>46</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
 <p>Se puede ver como a medida que la edad va aumentando, también va aumentando, exponencialmente, el riesgo de padecer un evento cardíaco.</p>
 </div>
 </div>
@@ -131,22 +162,76 @@ $(document).ready(function () {
 <h3>Obesos</h3>
 <p>En este gráfico puede verse representado el total de casos y la cantidad de obesos que se encuentran y luego, puede verse el total de pacientes con eventos y cuantos de esos pacientes padecían de obesidad.</p>
 <p><img src="index_files/figure-html/obesosCEve-1.png" width="576" /></p>
-<pre><code>     CantidadDeObesos CantidadDeNoObesos
-[1,]              222                780</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Obesidad Total</th>
+<th>Obesidad Sin Evento</th>
+<th>Obesidad Con Evento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cantidad</td>
+<td>222</td>
+<td>167</td>
+<td>55</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="diabéticos-con-y-sin-eventos" class="section level3 unnumbered unnumbered">
 <h3>Diabéticos Con Y Sin Eventos</h3>
 <p>Ahora, se muestra el gráfico de los pacientes diabéticos que no padecieron eventos y los que padecieron un evento.</p>
 <p><img src="index_files/figure-html/Diabeticos%20-1.png" width="576" /></p>
-<pre><code>     cantidadaDBT cantidadDBTsinEventos cantidadDBTconEventos
-[1,]          114                    82                    32</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Diabéticos Totales</th>
+<th>Diabéticos Sin Eventos</th>
+<th>Diabéticos Con Eventos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cantidad</td>
+<td>114</td>
+<td>82</td>
+<td>32</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="obesos-con-eventos-diferenciados-por-diabetes" class="section level3 unnumbered unnumbered">
 <h3>Obesos Con Eventos Diferenciados Por Diabetes</h3>
 <p>En este gráfico, a partir de los obesos que sufrieron un evento, se muestra cuantos de estos son diabéticos.</p>
 <p><img src="index_files/figure-html/ObesosYDiabeticos-1.png" width="576" /></p>
-<pre><code>     CantidadDeObesos CantidadDeObesosConDiabetes
-[1,]              222                          65</code></pre>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="26%" />
+<col width="31%" />
+<col width="31%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Obesidad Total Con Evento</th>
+<th>Obesos Sin Diabetes Sin Evento</th>
+<th>Obesos Con Diabetes Con Evento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cantidad</td>
+<td>55</td>
+<td>30</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
 <p>Se puede ver que, de los pacientes con obesidad que sufrieron de un evento, un 30% de estos era además diabético. Por lo que podemos observar que el ser obeso y diabético genera una alta probabilidad de sufrir algún evento</p>
 </div>
 </div>
@@ -158,7 +243,38 @@ $(document).ready(function () {
 <div id="tipos-de-dolores" class="section level2 tabset tabset-fade tabset-pills uno">
 <h2>Tipos De Dolores</h2>
 <p>En el siguiente gráfico se ve representado el total de dolores y de que tipo son estos, y además en la barra a la izquierda se muestra los dolores de personas que hayan sufrido algún evento.</p>
-<p><img src="index_files/figure-html/grafDoloresTot-1.png" width="576" /> Con estos datos se observa que el 15% de los pacientes que se presentaron con un dolor Opresivo terminó sufriendo un evento. El 12% que se presentaron con acidez sufrieron de un evento. Y el 8% de los pacientes que se presentaron con un dolor del tipo de puntada, sufrieron de un evento. Se puede ver que tanto los pacientes que presenten dolor opresivo como acidez, tienen una mayor probabilidad de terminar sufriendo un evento, a que un paciente que presente un dolor del tipo puntada sufra de uno.</p>
+<p><img src="index_files/figure-html/grafDoloresTot-1.png" width="576" /></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Dolores Totales</th>
+<th>Dolores Sin Evento</th>
+<th>Dolores Con Evento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Opresivo</td>
+<td>517</td>
+<td>441</td>
+<td>76</td>
+</tr>
+<tr class="even">
+<td>Puntada</td>
+<td>370</td>
+<td>339</td>
+<td>31</td>
+</tr>
+<tr class="odd">
+<td>Ácido</td>
+<td>115</td>
+<td>101</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<p>Con estos datos se observa que el 15% de los pacientes que se presentaron con un dolor Opresivo terminó sufriendo un evento. El 12% que se presentaron con acidez sufrieron de un evento. Y el 8% de los pacientes que se presentaron con un dolor del tipo de puntada, sufrieron de un evento. Se puede ver que tanto los pacientes que presenten dolor opresivo como acidez, tienen una mayor probabilidad de terminar sufriendo un evento, a que un paciente que presente un dolor del tipo puntada sufra de uno.</p>
 </div>
 <div id="tabaquismo-e-hipertensión" class="section level2">
 <h2>Tabaquismo e Hipertensión</h2>
@@ -173,7 +289,7 @@ $(document).ready(function () {
 </div>
 <div id="predictor" class="section level1">
 <h1>Predictor</h1>
-<p>A partir de los datos que analizamos previamente, realizamos un predictor de Eventos Cardíacos. Además, se utilizó el método StepWise, en el que se recorren los datos en ambas direcciones buscando la mayor influencia de los datos, y que terminó arrojando variables muy similares a las que se utilizaron previamente en el análisis. Las variables que terminamos eligiendo son las siguientes:</p>
+<p>A partir de los datos que analizamos previamente, realizamos un predictor de Eventos Cardíacos. Se utilizó una herramienta de machine learning que realiza una selección automática de variables. En nuestro caso, esa selección automática tuvo bastante coincidencia con la identificación de variables importantes del análisis previo que hicimos. Las variables que finalmente consideramos importantes para nuestro modelo son las siguientes:</p>
 <ul>
 <li>Edad</li>
 <li>Antecedentes familiares</li>
@@ -192,10 +308,27 @@ $(document).ready(function () {
 <p>Para modelar el predictor hemos utilizado un método de regresión logística, el cual se aprovecha para realizar predicciones categóricas, como ocurre en este caso.</p>
 <p>A partir de estos datos se realizó un test utilizando otra cantidad de datos distinta a la que se utilizó para realizar el predictor, lo que es de importancia para poder verificar la eficacia de este.</p>
 <p><img src="index_files/figure-html/pred1-1.png" width="576" /></p>
-<p>Se puede observar, que el predictor presenta una mayor eficacia en diagnosticar correctamente a un verdadero negativo que un verdadero positivo. La principal causa de esto es que, como se presentó al principio del análisis, tan solo un 12% de los datos provistos padecieron de un evento. Aun así, aquí abajo se puede ver que la probabilidad de que nuestro predictor diagnostique un falso positivo es muy baja. Para esto se utilizó la curva AUROC. Esta curva evalúa la precisión de un predictor mediante la ocurrencia de falsos positivos, cuanto mayor sea el valor obtenido de una curva AUROC, mayor va a ser la precisión del predictor.</p>
+<p>Se puede observar, que el predictor presenta una mayor eficacia en diagnosticar correctamente a un verdadero negativo que un verdadero positivo. La principal causa de esto es que, como se presentó al principio del análisis, tan solo un 12% de los datos provistos padecieron de un evento.</p>
+<p>Aun así, aquí abajo se puede ver que la probabilidad de que nuestro predictor diagnostique un falso positivo es muy baja.</p>
+<p>Para esto se utilizó la curva AUROC. Esta curva evalúa la precisión de un predictor mediante la ocurrencia de falsos positivos, cuanto mayor sea el valor obtenido de una curva AUROC, mayor va a ser la precisión del predictor.</p>
 <p><img src="index_files/figure-html/pred2-1.png" width="576" /></p>
 <pre><code>[1] 0.8550314</code></pre>
-<p>Como se puede observar la curva AUROC arrojó una eficacia del 85.5%, es decir que, el predictor tan solo tiene un 14.5% de diagnosticar a un falso positivo.</p>
+<p>Como se puede observar la curva AUROC arrojó una precisión del 85.5%.</p>
+</div>
+<div id="autores" class="section level1">
+<h1>Autores</h1>
+<div id="nicolás-werner" class="section level2">
+<h2>Nicolás Werner</h2>
+<p><a href="mailto:nicolas.werner@ing.austral.edu.ar" class="email">nicolas.werner@ing.austral.edu.ar</a></p>
+</div>
+<div id="alberto-pizzi" class="section level2">
+<h2>Alberto Pizzi</h2>
+<p><a href="mailto:alberto.pizzi@ing.austral.edu.ar" class="email">alberto.pizzi@ing.austral.edu.ar</a></p>
+</div>
+<div id="alejandro-maglio" class="section level2">
+<h2>Alejandro Maglio</h2>
+<p><a href="mailto:alejandro.maglio@ing.austral.edu.ar" class="email">alejandro.maglio@ing.austral.edu.ar</a></p>
+</div>
 </div>
 
     </div>
